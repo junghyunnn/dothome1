@@ -33,7 +33,7 @@
 #cont_cont {height: 200px; background: #777;}
 
 /* 컨테이너 */
-.container {width: 990px; margin: 0 auto; height: inherit; background-color: rgba(255,255,255,0.3);}
+.container {width: 990px; margin: 0 auto; height: inherit; /*background-color: rgba(255,255,255,0.3);*/}
 
 /* header */
 .header {}

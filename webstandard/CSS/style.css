@@ -112,12 +112,7 @@
     width: 60px; 
     height: 60px;
     background-image: url(../img/icon.png);
-    width: 60px;
-    height: 60px;
 }
-.cont .column .ico_tit {padding-left: 70px; font-size: 16px; color: #2c94c4;}
-.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #d0d0d0; padding-bottom: 15px;}
-
 .cont .col1 .ico_img {background-position: 0 -240px;}
 .cont .col1 .ico_img:hover {background-position: -60px -240px;}
 .cont .col2 .ico_img {background-position: 0 -300px;}
@@ -130,3 +125,36 @@
 .cont .col5 .ico_img:hover {background-position: -60px -480px;}
 .cont .col6 .ico_img {background-position: 0 -540px;}
 .cont .col6 .ico_img:hover {background-position: -60px -540px;}
+
+.cont .column .ico_tit {padding-left: 70px; font-size: 16px; color: #2c94c4;}
+.cont .column .ico_desc {
+    padding-left: 70px; 
+    border-bottom: 1px solid #d0d0d0; 
+    padding-bottom: 15px; 
+    margin-bottom: 15px;
+}
+
+
+/* 게시판 */
+.notice {position: relative;}
+.notice h4 {font-size: 14px; color: #0094dd; padding-bottom: 3px; font-weight: bold;}
+.notice ul li {
+    padding-left: 8px; 
+    background: url(../img/dot.gif); 
+    background-repeat: no-repeat; 
+    background-position: 0 8px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+} /* 한 줄 효과 */
+.notice ul li a {font-size: 12px;}
+.notice a.more {
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    width: 17px; 
+    height: 17px; 
+    display: block; 
+    background-image: url(../img/icon.png); 
+    background-position: -150px -90px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery01</title>
+    <style>
+        @font-face {
+            font-family: 'paybooc-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {font-family: 'paybooc-Bold';}
+        li.red {color: #c7254e; background-color: #f9f2f4; border: 1px dashed #a51a3d}
+    </style>
+    </head>
+    <body>
+
+        <h3>탐색</h3>
+        <ul>
+            <li>add class() 매서드는 선택한 요소에 클래스를 생성하고 remove Class() 매서드는 선택한 요소에서 지정한 클래스를 삭제합니다</li>
+            <li>hasClass() 매서드는 선택한 요소에 저장한 클래가 있으면 true를 반환하고 없으면 flase를 반환합니다.</li>
+            <li>toggle Clas() 매서드는 선택한 요소에 지정한 클래스가 없으면 생성하고 있을 경우에는 삭제합니다.</li>
+        </ul>
+        <button class="btn1">addClass()</button>
+        <button class="btn2">removeClass()</button>
+        <button class="btn3">toggleClass()</button>
+
+
+        <!-- script -->
+        <script src="jquery.min_1.124.js"></script>
+        <script>
+            // $("li:eq(1)").css({color: "#fff", backgroundColor: "red"});
+            // $("li:contains").css({color: "#fff", backgroundColor: "red"});
+            // $("li:odd").css({color: "#fff", backgroundColor: "red"});
+            // $("li:nth-child(2)").css({color: "#fff", backgroundColor: "red"});
+            // $("li:nth-child(even)").css({color: "#fff", backgroundColor: "red"});
+            // $("li:nth-child-of-type(2)").css({color: "#fff", backgroundColor: "red"});
+            // $("li:nth-child(2n)").css({color: "#fff", backgroundColor: "red"});
+            $(".btn1").click(function(){
+                // $("li:nth-child(2)").css({color: "#fff", backgroundColor: "red"});
+                $("li:nth-child(2)").addClass("red")
+            });
+            $(".btn2").click(function(){
+                $("li:nth-child(2)").removeClass("red")
+            });
+            $(".btn3").click(function(){
+                $("li:nth-child(2)").toggleClass("red")
+            });
+        </script> 
+    </body>
+    </html>

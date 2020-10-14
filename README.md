@@ -5,3 +5,6 @@
 
 #find()/filter()
 <a> href="https://junghyunnn.github.io/dothome1/jpuery/jquery04.html">바로가기</a>
+
+#addclass()
+<a> href="https://junghyunnn.github.io/dothome1/jpuery/jquery06_addclass2.html">바로가기</a>

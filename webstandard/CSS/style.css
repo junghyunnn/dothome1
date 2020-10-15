@@ -29,11 +29,7 @@
     background: url(../img/header_bg.jpg) repeat-x center top;
 }
 #contents {}
-#footer {
-    font: 100%; 
-    height: 200px; 
-    background: #333;
-}
+#footer {border-top: 1px solid #ccc;}
 
 /* 컨텐츠 레이아웃 */
 #cont_nav {background: #f6fdff;}
@@ -294,6 +290,14 @@
 .noteice_hover li a span:hover em {visibility: visible;}
 .noteice_hover li a strong {font-size: 12px; padding: 3px; display: inline-block;}
 
+/* 팝업 */
+.popup h4 {font-size: 14px; color: #0093bd; font-weight: bold; padding-bottom: 3px;}
+.popup ul {overflow: hidden;}
+.popup li {float: left; width: 93px; margin-right: 5px;}
+.popup li.pop_last {margin-right: 0;}
+.popup li:last-child {margin-right: 0;}
+.popup li img {width: 100%;}
+
 /* 콘텐츠 요소를 보이지 않게 하는 방법*/
 /* 1. display: none; <--> display: block (영역이 사라짐)
 2. visibility : hidden; <--> visivility: visible; (영역 유지)
@@ -356,3 +360,12 @@
 .gallery .gallery_btn li.gb_icon3 a:hover {background-position: -173px -166px;}
 .gallery .gallery_btn li.gb_icon4 a:hover {background-position: -173px -189px;}
 .gallery .gallery_img img {width: 100%;}
+
+/* 포터 */
+.footer {text-align: center; padding: 25px 0;}
+.footer ul {}
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}
+.footer li::before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
+.footer li:first-child::before {width: 0; height: 0;}
+.footer address {margin-top: 20px;}
+

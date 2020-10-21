@@ -100,7 +100,14 @@
 /* 타이틀 */
 .tit {position: relative;}
 .tit h2 {text-align: center; font-size: 40px; padding: 5px 0; color: #2c94c4; letter-spacing: 2px; font-family: 'Nanum Brush Script';}
-.tit .btn {position: absolute; right: 0; top: 5px; display: inline-block; background-image: url(../img/icon.png); width: 60px; height: 60px; background-position: 0 -600px;}
+.tit .btn {
+    position: absolute; 
+    right: 0; top: 5px; 
+    display: inline-block; 
+    background-image: url(../img/icon.png); 
+    width: 60px; height: 60px; 
+    background-position: 0 -600px;
+}
 .tit .btn.on {background-position: 0 -660px;}
 /* 배너 */
 .ban {position: relative; padding: 24px 0;}

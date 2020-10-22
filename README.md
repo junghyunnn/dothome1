@@ -8,3 +8,6 @@
 
 #addclass()
 <a href="https://junghyunnn.github.io/dothome1/jpuery/jquery06_addclass2.html">바로가기</a>
+
+#닷홈 메인 페이지
+<a href="http://wbslsj200.dothome.co.kr/">바로가기</a>

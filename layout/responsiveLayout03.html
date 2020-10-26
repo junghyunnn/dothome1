@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {background: #e3f2fd;}
+        .container {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 100px; background:#bbdefb;}
+        aside {width: 30%; height: 900px; background:#64b5f6; float: left;}
+        .acricle1 {width: 70%; height: 300px; background: #2196f3; float: left;}
+        .acricle2 {width: 70%; height: 300px; background: #1976d2; float: left;}
+        .acricle3 {width: 70%; height: 300px; background: #0d47a1;  float: left;}
+        footer {width: 100%; height: 100px; background: #448aff ; clear: both;}
+
+        @media(max-width: 1280px){
+            .container {width: 100%;}
+            .acricle1 {width: 70%; height: 450px;}
+            .acricle2 {width: 70%; height: 450px;}
+            .acricle3 {width: 100%;}
+        }
+        @media(max-width: 900px){
+            aside {width: 100%;}
+            .acricle1 {width: 50%;}
+            .acricle2 {width: 50%;}
+        }
+        @media(max-width: 400px){
+            aside {width: 100%;}
+            .acricle1 {width: 100%;}
+            .acricle2 {width: 100%;}
+            .acricle3 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <aside></aside>
+            <article>
+                <div class="acricle1"></div>
+                <div class="acricle2"></div>
+                <div class="acricle3"></div>
+            </article>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>

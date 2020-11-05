@@ -1,10 +1,18 @@
+/* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
+#nav {background: #f6fdff;}
+#title {background: #eaf7fd;}
+#contents .container {border-right: 1px solid#dbdbdb; border-left: 1px solid#dbdbdb;}
+#cont_left {float: left; width: 250px; height: 1000px;}
+#cont_center {overflow: hidden; height: 1000px; margin-right: 250px; border-right: 1px solid#dbdbdb; border-left: 1px solid#dbdbdb;}
+#cont_right {position: absolute; right: 0; top: 0; width: 250px; height: 1000px;}
+#footer {border-top: 1px solid #dbdbdb;}
+
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
+.container {position: relative; width: 1200px; margin: 0 auto;}
 
 /* 헤더 */
-.header {}
 .header .header_menu {
     text-align: right;
 }
@@ -100,7 +108,62 @@
     0 0 0 100px rgba(0,0,0,0.1) inset;
 }
 
+/* 전체 메뉴 */
+.nav {overflow: hidden; padding: 25px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;}
+.nav h3 {font-size: 18px; color: #25a2d0; font-weight: bold; margin-bottom: 4px;}
+.nav ol {overflow: hidden;}
+.nav ol li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box;}
+.nav div li::before {content: ''; width: 3px;height: 3px; background: #25a3f0; border-radius: 50%; position: absolute; left: 0; top: 6px;}
+.nav > div:last-child li {width: 100%;}
+.nav > div li a {position: relative; transition: all 0.3s ease-out;}
+.nav > div li a:after {
+    content: '';
+    width: 0; height: 1px;
+    background: #25aad0;
+    position: absolute;
+    bottom: 0; left: 0;
+    transition: all 0.3s ease-out;
+}
+.nav > div li:hover a::after {
+    width: 100%;
+}
+
+/* 서브 타이틀 */
+.title {position: relative; text-align: center;}
+.title h2 {font-family: 'Nanum Brush Script'; font-size: 39px; color: #0093bd; padding: 5px 0;}
+.title .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background: #3192bf; line-height: 60px; border-radius: 50%; font-size: 35px; color: #fff;}
+.title .btn:hover {box-shadow: 0 0 0 3px rgba(71,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;}
+
+/* 컨텐츠 */
+.column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.col_tit {font-size: 20px; color: #2f7fa6; padding-bottom: 5px;}
+.col_desc {border-bottom: 1px dashed #dbdbdb; padding-bottom: 13px; margin-bottom: 15px; color: #878787; line-height: 10px;}
+.colum.col1 {}
+.colum.col2 {}
+.colum.col3 {border-bottom: 0;}
+.colum.col4 {}
+.colum.col5 {}
+.colum.col6 {border-bottom: 0;}
+.colum.col7 {}
+.colum.col8 {}
+.colum.col9 {border-bottom: 0;}
+
+
 /*미디어쿼리*/
 @media (max-width: 1220px){
     .container {width: 100%;}
+}
+@media (max-width: 960px){
+    #cont_center {margin-right: 0;}
+    #cont_right {position: static; width: 100%; height: 400px;}
 } 
+@media (max-width: 768px){
+    #cont_left {float: none; width: 100%; height: 400px;}
+    #cont_center {height: 400px;}
+    
+    
+} 
+
+

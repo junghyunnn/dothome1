@@ -425,17 +425,17 @@
                 <!-- //Intro5 -->
                 <style>
                     .timing.bg6 {height: 600px;}
-                    .timing.bg6 > div {background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);}
-                    .timing25.normal {animation: move2 4s 5 ease normal;}
-                    .timing25.reverse {animation: move2 4s 5 ease reverse;}
-                    .timing25.alternate {animation: move2 4s 5 ease alternate;}
-                    .timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+                    .timing.bg6 > div {background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);}
+                    .timing25.normal {animation: move2 4s infinite ease normal;}
+                    .timing25.reverse {animation: move2 4s infinite ease reverse;}
+                    .timing25.alternate {animation: move2 4s infinite ease alternate;}
+                    .timing25.alternate-reverse {animation: move2 4s infinite ease alternate-reverse;}
                     @keyframes move2 {
                         0% {left: 0; top: 0;}
                         25% {left: calc(100% - 120px); top: 0;}
-                        50% {left: calc(100% - 120px); top: 100%;}
-                        75% {left: calc(100% - 120px); top: 100%;}
-                        100% {left: 0; top: 0;}
+                        50% {left: calc(100% - 120px); top: calc(100% - 120px);}
+                        75% {left: 0; top: calc(100% - 120px);}
+                        100% {left: 0; top: 0;}                        
                     }
                 </style>
                 <!-- Intro6 -->
@@ -535,12 +535,10 @@
             $(".timing.bg5 > div").addClass("show");
         });
         $("#intro6 > button").click(function(){
-            $(this).text();
-            $("timing25").addClass(text);
-            setTimeout(function(){
-                $("timing25").removeClass("show");
-            });
+            const text = $(this).text();
+            $(".timing25").removeClass("normal reverse alternate alternate-reverse").addClass(text);
         });
+
         // $(".stepBtnStart").click(function(e){
         //     e.preventDefault();
         //     $(".stepbox").removeClass("stop").addClass("start");

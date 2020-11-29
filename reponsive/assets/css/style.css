@@ -278,7 +278,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 /* footer */
 .footer {text-align: center; padding: 30px 50px;}
 .footer li {position: relative; display: inline; padding: 0 7px 0 10px; word-break: keep-all;}
-.footer li:before {content: ''; width: 1px; height: 12px; position: absolute; left: 0; top: 2px;}
+.footer li:before {content: ''; width: 1px; background: #ccc; height: 12px; position: absolute; left: 0; top: 2px;}
 .footer li:first-child::before {width: 0; height: 0;}
 .footer address {padding: 15px; font-style: normal;}
 

@@ -138,7 +138,7 @@
 .ban a.next:hover {background-position: -193px -43px;}
 .ban ul {overflow: hidden;}
 .ban ul li {float: left; width: 330px;}
-.ban ul li img {border: 4px solid #dcdcdc}
+.ban ul li img {border: 4px solid #dcdcdc;}
 .ban ul li img:hover {border: 4px; border-color: #98bcdc;}
 .ban ul li.ban_img1 {text-align: left;}
 .ban ul li.ban_img2 {text-align: center;}

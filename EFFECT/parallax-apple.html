@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax-Apple</title>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        em {font-style: normal;}
+        body {height: 20000px; font-family: 'paybooc-Bold';}
+        .scroll {
+            position: fixed; right: 10px; top: 10px;
+            width: 50px; height: 50px; line-height: 50px;
+            text-align: center; color: #fff;
+            background: rgba(0,0,0,0.5);
+            z-index: 10000000;
+        }
+
+        /* common */
+        .fixed {position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1000;}
+        img {width: 100%; vertical-align: top;}
+
+        /* section1 */
+        .s1Txt01 {font-size: 8vw;}
+        .s1Txt02 {font-size: 8vw; white-space: nowrap;}
+        .s1Txt03 {width: 0%; height: 0%; z-index: 900;}
+        .s1Txt04 {width: 30vw; height: 30vw; background: #000; border-radius: 50%; color: #fff;}
+        .s1Txt05 {font-size: 4vw;}
+
+        /* section2 */
+        .s2Txt01 {width: 100vw; height: 100vh; background: #000;}
+        .s2Txt02 h2 {
+            color: #fff; font-size: 4vw; 
+            text-align: center; line-height: 1.2;
+            background-repeat: no-repeat; 
+            background-image: url(img/textdddddd.jpg);
+            background-size: cover; background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+        .fixed.text1 {
+            display: flex;
+        }
+        .fixed.text1 h3 {
+            flex: 1 1 30%;
+        }
+        .fixed.text1 p {
+            flex: 1 1 70%;
+        }
+        .s2Txt03 {
+            color: #fff;
+        }
+        .s2Txt03 .text1 {
+            font-size: 2vw;
+        }
+        .s2Txt04 {
+            width: 60vw; height: 60vh;
+            background-image: url(img/apple_head.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            /* background-color: #fff; */
+            top: 70%;
+        }
+        .s2Txt04 .imgWrap {
+            width: 94%; height: 100%;
+            margin: 3%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px 30px 0 0;
+        }
+        .s2Txt04 .imgWrap > div {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 100%; height: 100%;
+            transform: translate(-50%, -50%);
+        }
+        .s2Txt04 .imgWrap > div .view {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: 100px; height: 100px;
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 100px;
+            text-decoration: none;
+            transition:  box-shadow 400ms ease, background 400ms ease;
+
+        }
+        .s2Txt04 .imgWrap > div .view.white {
+            background: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.8);
+            box-shadow: 255,255,255 6px inset rgba(255,255,255,0.9);
+        }
+        .s2Txt04 .imgWrap > div .view.white:hover {
+            background: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.8);
+            box-shadow: 255,255,255 6px inset rgba(255,255,255,0.9);
+        }
+        .s2Txt04 .imgWrap > div .view:hover {
+            box-shadow: 0 0 0 6px inset rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.7);
+            color: rgba(255,255,255,1);
+        }
+
+        /* scetion3 */
+        .s3Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+        }
+        .s3Txt02 h2 {
+            color: #fff; font-size: 4vw; 
+            text-align: center; line-height: 1.2;
+            background-repeat: no-repeat; 
+            background-image: url(img/textdddddd.jpg);
+            background-size: cover; background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+        .txtBox1 {left: 200%; transform: scale();}
+        .txtBox2 {left: 200%; transform: scale();}
+        .txtBox3 {left: 200%; transform: scale();}
+        .txtBox4 {left: 200%; transform: scale();}
+        .txtBox5 {left: 200%; transform: scale();}
+        .txtBox6 {left: 200%; transform: scale();}
+
+        .aniBox1 {}
+        .aniBox2 {}
+        .aniBox3 {}
+        .aniBox4 {}
+        .aniBox5 {}
+        .aniBox6 {}
+    </style>
+</head>
+<body>
+    <div class="scroll">0</div>
+
+    <div id="contents">
+        <section id="section1"
+            data-0 = "display: block"
+            data-7999 = "display: none"
+        >
+            <div class="s1Txt01 fixed"
+                data-0 = "top: 50%; opacity:1"
+                data-500 = "top: 30%; opacity:0"
+            >안녕하세요</div>
+            <div class="s1Txt02 fixed"
+                data-300 = "top: 70%; opacity:0"
+                data-800 = "top: 50%; opacity:1; font-size: 8vw;"
+                data-1700 = "top: 50%; opacity:1; font-size: 0vw;"
+            >프론트엔드 개발자 입니다.</div>
+            <div class="s1Txt03 fixed"
+                data-1600 = "width: 0%; height: 0%;"
+                data-2400 = "width: 100%; height: 100%;"
+            ><img src="img/apple-01.jpg" alt="이미지" class="fixed"
+                data-1600 = "border-radius:500px"
+                data-2400 = "border-radius:0px"
+            >
+            </div>
+            <div class="s1Txt04 fixed" data-titlt="검은색 원"
+                data-2300 = "width: 0vw; height: 0vw;"
+                data-3300 = "width: 30vw; height: 30vw;"
+                data-5000 = "width: 30vw; height: 30vw;"
+                data-7600 = "width: 230vw; height: 230vw;"
+            >
+                <span class="s1Txt05 fixed"
+                    data-2800 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
+                    data-4300 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-5000 = "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                    data-7000 = "transform: translate(-50%, -50%) scale(0) rotate(0deg)"
+                >Hello</span>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section2"
+            data-7899 = " display: none"
+            data-7900 = "display: block"
+            data-30000="display:block"
+            data-30001="display:none">
+        >
+            <div class="s2Txt01 fixed" data-tutkt="검은색 배경"></div>
+            <div class="s2Txt02">
+                <h2 class="fixed"
+                    data-7900="opacity:0;"
+                    data-8200="opacity:1; top: 50%; transform: translate(-50%, -50%) scale(2)"
+                    data-8800="opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
+                    data-27000="opacity:1; top: 14%; transform: translate(-50%, -50%) scale(1)"
+                    data-28000="opacity:1; top: 50%; transform: translate(-50%, -50%) scale(1.5)"
+                >I've been working on Sites</h2>
+                <div class="s2Txt03">
+                        <div class="fixed text1"
+                            data-9800 = "top: 50%; opacity:0"
+                            data-10800 = "top: 30%; opacity:1"
+                            data-11800 = "top: 30%; opacity:1"
+                            data-12800 = "top: 50%; opacity:0"
+                        >
+                            <h3>웹표준 사이트</h3>
+                            <p>웹 접근성 지침서 2.0을 바탕으로 사이트를 제작하였습니다.</p>
+                        </div>
+                        <div class="fixed text1"
+                            data-13800 = "top: 50%; opacity:0"
+                            data-14800 = "top: 30%; opacity:1"
+                            data-15800 = "top: 30%; opacity:1"
+                            data-16800 = "top: 50%; opacity:0"
+                        >
+                            <h3>반응형 사이트</h3>
+                            <p>모든 디바이스 환경에 따라 사이트를 최적화시켜 사이트를 제작하였습니다.</p>
+                        </div>
+                        <div class="fixed text1"
+                            data-17800 = "top: 50%; opacity:0"
+                            data-18800 = "top: 30%; opacity:1"
+                            data-19800 = "top: 30%; opacity:1"
+                            data-20800 = "top: 50%; opacity:0"
+                        >
+                            <h3>기업 사이트</h3>
+                            <p>기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.</p>
+                        </div>
+                        <div class="fixed text1"
+                            data-24000 = "top: 50%; opacity:0"
+                            data-25000 = "top: 30%; opacity:1"
+                            data-26000 = "top: 30%; opacity:1"
+                            data-27000 = "top: 50%; opacity:0"
+                        >
+                            <h3>리액트 사이트</h3>
+                            <p>React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p>
+                        </div>
+                </div>
+                <div class="s2Txt04 fixed"
+                    data-8600 = "top: 150%"
+                    data-9600 = "top: 70%"
+                    data-27000 = "top: 70%"
+                    data-28000 = "top: 150%"
+                >
+                <div class="imgWrap">
+                    <div class="img1"
+                        data-13000 = "left: 50%"
+                        data-14000 = "left: -50%"
+                    ><img src="img/apple_wsite.jpg" alt="웹표준">
+                    <a href="#" class="view">view</a>
+                </div>
+                    <div class="img2"
+                        data-13000 = "left: 150%"
+                        data-14000 = "left: 50%"
+                        data-17000 = "left: 50%"
+                        data-18000 = "left: -50%"
+                    ><img src="img/apple_wsite.jpg" alt="반응형">
+                    <a href="#" class="view">view</a>
+                </div>
+                    <div class="img3"
+                        data-17000 = "left: 150%"
+                        data-18000 = "left: 50%"
+                        data-21000 = "left: 50%"
+                        data-24000 = "left: -50%"
+                    ><img src="img/apple_wsite.jpg" alt="메가박스">
+                    <a href="#" class="view">view</a>
+                </div>
+                    <div class="img4"
+                        data-21000 = "left: 150%"
+                        data-24000 = "left: 50%"
+                    ><img src="img/apple_wsite.jpg" alt="리액트">
+                    <a href="#" class="view">view</a>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+        <section id="section3"
+            data-29999="display:none"
+            data-30000="display:block"
+            data-40000="display:block"
+            data-40001="display:none">
+            <div class="s3Txt01 fixed" data-tutkt="검은색 배경"
+            data-30000 = "width: 200vw; height: 200vw"
+            data-34000 = "width: 100vw; height: 20vw">
+        </div>
+        <div class="s3Txt02">
+            <h2 class="txtBox fixed"
+                data-30500 = "left: 50%"
+                data-33500 = "left: -150%"
+            >
+            <span>I've been working on Sites</span></h2>
+            <h2 class="txtBox1 fixed"
+                data-32000 = "left: 200%"
+                data-36000 = "left: -200%"
+            >
+            <span>Animation1</span></h2>      
+            <h2 class="txtBox2 fixed"
+                data-33000 = "left: 200%"
+                data-37000 = "left: -200%"
+            ><span>Animation2</span></h2>      
+            <h2 class="txtBox3 fixed"
+                data-34000 = "left: 200%"
+                data-38000 = "left: -200%"
+            ><span>Animation3</span></h2>      
+            <h2 class="txtBox4 fixed"
+                data-35000 = "left: 200%"
+                data-39000 = "left: -200%"
+            ><span>Animation4</span></h2>      
+            <h2 class="txtBox5 fixed"
+                data-36000 = "left: 200%"
+                data-40000 = "left: -200%"
+            ><span>Animation5</span></h2>      
+            <h2 class="txtBox6 fixed"
+                data-37000 = "left: 200%"
+                data-41000 = "left: -200%"
+            ><span>Animation6</span></h2>    
+        </div>
+            <div 67lass="s3Text03">
+                <h2 class="anibox1 fixed">
+                    <iframe height="265" style="width: 100%;" scrolling="no" title="svg text animation" src="https://codepen.io/junghyunnn/embed/VwKLzLO?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href='https://codepen.io/junghyunnn/pen/VwKLzLO'>svg text animation</a> by junghyunnn
+                        (<a href='https://codepen.io/junghyunnn'>@junghyunnn</a>) on <a href='https://codepen.io'>CodePen</a>.
+                      </iframe>
+                </h2>
+                <h2 class="anibox1 fixed"><span>Animation1</span></h2>
+                <h2 class="anibox2 fixed"><span>Animation2</span></h2>
+                <h2 class="anibox3 fixed"><span>Animation3</span></h2>
+                <h2 class="anibox4 fixed"><span>Animation4</span></h2>
+                <h2 class="anibox5 fixed"><span>Animation5</span></h2>
+                <h2 class="anibox6 fixed"><span>Animation6</span></h2>
+        </div>
+        </section>
+        <!-- //section3 -->
+        <section id="section4"></section><!-- //section4 -->
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+
+    <script>
+        var s = skrollr.init();
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".scroll").text(scrollTop)
+        })
+    </script>
+</body>
+</html>

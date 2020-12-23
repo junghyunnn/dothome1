@@ -159,7 +159,7 @@
         <div class="info">
             <ul>
                 <li>시험 유형 : <span>주관식 퀴즈(1문제)</span></li>
-                <li>시험 과목 : <span>제이쿼리</span></li>
+                <li>시험 과목 : <span>자바스크립트</span></li>
                 <li>시험 과목 : <span>CSS</span></li>
             </ul>
         </div>
@@ -204,6 +204,7 @@
         const questionBottom = document.querySelector(".confirm-bottom");
         const qusetionSelect = document.querySelectorAll(".select");
         const qusetionChoice = document.querySelectorAll(".choice")
+
         //문제 정보
         const quizInfo = [
             {
@@ -214,6 +215,7 @@
                 quizEx : "시멘틱 태그는 의미가 부여된 태그로서 main 태그는 사이트에서 중요한 컨텐츠에 한 번만 사용할 수 있습니다."
             }  
         ]
+
         //문제 출력          
         function updataQuiz(){
             questionNum.innerHTML = quizInfo[0].quizNum;
@@ -223,11 +225,13 @@
             for(let i=0; i<4; i++){
                 qusetionChoice[i].innerHTML = quizInfo[0].quizChoice[i];
             }
+
             //정답 감추기
             questionAnswer.style.display = "none";
             questionEx.style.display = "none";
         };
         updataQuiz();
+        
         //정답 확인
         function answerQuiz(){
             for (let i=0; i<qusetionSelect.length; i++){

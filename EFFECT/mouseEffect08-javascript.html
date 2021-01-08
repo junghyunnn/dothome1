@@ -198,24 +198,17 @@
         </div>
     </main>
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js></script>
     <script>
-       $(window).on("mousemove", mouseMove);
-
-        function mouseMove(e){
-            let positionSlow = (e.pageX - ($(window).width()/2)) * 0.1;
-            let positionFast = (e.pageX - ($(window).width()/2)) * 0.2;
-
-            gsap.to(".span-slow", {
-                duration: .4,
-                x: positionSlow
-            })
-            gsap.to(".span-fast", {
-                duration: .4,
-                x: -positionFast
-            })
-        }
+       class jv8 {
+        constructor(obj){
+                this.el = document.body.querySelector('#svg-mask');
+                this.rect = document.body.querySelectorAll('.svg-mask--rect');
+                this.circle = document.body.querySelectorAll('.svg-mask--circle');
+                this.clicked = false
+                this.init();
+            } 
+       }
     </script>
 </body>
 </html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0; padding: 0; 
+            box-sizing: border-box;
+        }
+        #conetets > section .num {
+            position: absolute; left: 70%; top: 0%;
+            z-index: 90;
+            font-size: 20vw;
+            color: #fff;
+            font-weight: 100;
+            opacity: 0.082;
+            letter-spacing: -1vw;
+            font-family: 'Poppins', sans-serif;
+        }
+        #conetets > section .imgWrap {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            width: 50vw; height: 50vh;
+        }
+        #conetets > section .imgWrap .img {
+            width: 100%; height: 100%;
+        }
+        #conetets > section .title {
+            position: absolute; left: 20%; top: 60%;
+            width: 50vw;
+            z-index: 110;
+            color: #fff;
+            font-size: 4vw;
+            line-height: 1.4;
+            word-break: keep-all;
+            font-family: 'NEXON Lv2 Gothic';
+        }
+        #section1 .imgWrap .img {background: url(img/images11.jpg.jpg); background-size: cover;}
+        #section2 .imgWrap .img {background: url(img/images13.jpg.jpg); background-size: cover;}
+        #section3 .imgWrap .img {background: url(img/images14.jpg.jpg); background-size: cover;}
+        #section4 .imgWrap .img {background: url(img/images15.jpg.jpg); background-size: cover;}
+        #section5 .imgWrap .img {background: url(img/images08.jpg.jpg); background-size: cover;}
+        #section6 .imgWrap .img {background: url(img/images12.jpg.jpg); background-size: cover;}
+
+        /* set */
+        #section1 {position: relative; z-index: 6000; background: #111;}
+        #section2 {position: relative; z-index: 5000; background: #ccc;}
+        #section3 {position: relative; z-index: 4000; background: #111; height: 900vh;}
+        #section4 {position: relative; z-index: 5000; background: #000;}
+        #section5 {position: relative; z-index: 5000; background: #111;}
+        #section6 {position: relative; z-index: 5000; background: #000;}
+
+        .sec1 {position: relative; width: 100%; height: 100vh;}
+        .sec2 {position: relative; width: 100%; height: 100vh;}
+        .sec3 {position: fixed; left: 0; top: 0; width: 100%; height: 100vh;}
+        .sec4 {position: relative; width: 100%; height: 100vh;}
+        .sec5 {position: relative; width: 100%; height: 100vh;}
+        .sec6 {position: relative; width: 100%; height: 100vh;}
+        .sec3-wrap {
+            overflow: hidden;
+            width: 500vw;
+        }
+        .sec3-wrap > div {
+            float: left;
+            width: 100vw; height: 100vh;
+        }
+        .sec3-wrap > div:nth-child(1) {background: #999;}
+        .sec3-wrap > div:nth-child(2) {background: #888;}
+        .sec3-wrap > div:nth-child(3) {background: #777;}
+        .sec3-wrap > div:nth-child(4) {background: #666;}
+        .sec3-wrap > div:nth-child(5) {background: #555;}
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="headMenu">
+                <div class="title">
+                    <h1>Welcome To <br> My PortFollo SITE</h1>
+                </div>
+                <ul class="qick">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">My Site</a></li>
+                    <li><a href="#">My Reference</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="text-circle">
+                    <div class="circle"><img src="img/text-circle1.png" alt="text"></div>
+                </div>
+            </div>
+            <div class="img1">
+                <div class="omg"><img src="img/영어.png" alt="omg"></div>
+                <div class="rainbow"><img src="img/rainbow-egg.png" alt="rainbow"></div>
+                <div class="happy"><img src="img/Group 45.png" alt="happy"></div>
+                <div class="egg_1"><a href="#section1"><img src="img/Vector 293.png" alt="hpegg"></a></div>
+                <div class="wave"><img src="img/wave.png" alt="wave"></div>
+                <div class="wave-text">
+                    <p>Start your day in a<br>happy place</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="Contnets">
+        <section id="Cont2">
+            <div class="Cont2">
+                <p>시작 전에 노래 한 곡 어떠세요?</p>
+                <div class="img1">
+                    <div class="egg_2"><img src="img/hpegg.png" alt="hartegg"></div>
+                    <div class="eggout"><img src="img/껍질.png" alt="eggout"></div>
+                    <div class="hart"><img src="img/hart.png" alt="hart"></div>
+                </div>
+            </div>
+        </section>
+        <section id="Cont3">
+            <div class="Cont3">
+                <div class="cont3text">
+                    <h5><strong>끊</strong>임없이 나를 위해 도전하고 <br><strong>계</strong>속해서 앞으로 <strong>나</strong>아가는 사람</h5>
+                    <p>저는 항상 뭘 하고 싶은지 뭘 좋아하는지에 대한 고민을 했던 학생이였습니다.<br> 
+                        취업 후에도 끊임없이 저의 미래에 대하여 깊은 고민을 하게 되었고 찰나에 고등학교에<br>
+                        서 깊게는 아니지만 코딩 과목이 있는 날엔 항상 열심히 들으며 흥미로워하던 제가 생<br>
+                        각나 일 년 간의 고민 끝에 퇴사를 하고 웹 반응형 UI/UX 웹 퍼블리셔 과정을 수강하게<br>
+                        되었습니다. 6개월의 수료 과정에서 처음 수업 때와는 다르게 시간이 지날 수록 깊이 들<br>
+                        어가 어려움이 많았지만 그 과정을 해결해 나아가는 과정을 기반으로 어려움이 있어도<br>
+                         머물러 있지 않고 계속해서 나아갈 수 있도록 노력하는 사람이 되겠습니다.</p>
+                </div>
+                <div class="aboutMon"><img src="img/Group 66.png" alt="rainbow"></div>    
+                <div class="about1"><img src="img/Mask Group-1.png" alt="about1"></div>    
+                <div class="about2"><img src="img/Mask Group.png" alt="about2"></div>    
+            </div>
+        </section>
+        <section id="Cont4">
+            <div class="Cont4">
+                <h3>ANIMATION</h3>
+                <p>애니메이션 포토폴리오입니다.</p>
+                <img src="img/ani1.png" alt="SITE">
+            </div>
+        </section>
+        <section id="Cont4-1">
+            <div class="Cont4-1">
+                <div class="flower"><img src="img/ani3.png" alt="flower"></div>
+                <div class="anibox">
+                    <h5>Wave Circle Animation</h5>
+                    <h6>원을 이용한 웨이브 애니메이션입니다.</h6>
+                    <p>Codpen</p>
+                </div>
+            </div>
+            <div class="flower2"><img src="img/ani2.png" alt="flower2"></div>
+            <div class="flower3"><img src="img/ani4.png" alt="flower3"></div>
+        </section>
+        <section id="Cont4-2">
+            <div class="Cont4-2">
+                <div class="flower"><img src="img/ani3.png" alt="flower"></div>
+                <div class="anibox2">
+                    <h5>Tentacle Animation</h5>
+                    <h6>도형을 이용한 심화 애니메이션입니다.</h6>
+                    <p>Codpen</p>
+                </div>
+            </div>
+            <div class="flower2"><img src="img/ani2.png" alt="flower2"></div>
+            <div class="flower3"><img src="img/ani4.png" alt="flower3"></div>
+        </section>
+        <section id="Cont4-3">
+            <div class="Cont4-3">
+                <div class="flower"><img src="img/ani3.png" alt="flower"></div>
+                <div class="anibox3">
+                    <h5>Name Text Animation</h5>
+                    <h6>텍스트를 이용한 이름 애니메이션입니다.</h6>
+                    <p>Codpen</p>
+                </div>
+            </div>
+            <div class="flower2"><img src="img/ani2.png" alt="flower2"></div>
+            <div class="flower3"><img src="img/ani4.png" alt="flower3"></div>
+        </section>
+        <section id="Cont4-4">
+            <div class="Cont4-4">
+                <div class="flower"><img src="img/ani3.png" alt="flower"></div>
+                <div class="anibox4">
+                    <h5>SVG Sign Animation</h5>
+                    <h6>SVG를 이용한 사인 애니메이션입니다.</h6>
+                    <p>Codpen</p>
+                </div>
+            </div>
+            <div class="flower2"><img src="img/ani2.png" alt="flower2"></div>
+            <div class="flower3"><img src="img/ani4.png" alt="flower3"></div>
+        </section>
+        <section id="Cont5">
+            <div class="Cont5">
+                <h3>EFFECT MOTION</h3>
+                <p>이펙트 효과가 들어간 포토폴리오입니다.</p>
+                <img src="img/effect.png" alt="SITE">
+            </div>
+        </section>
+        <section id="Cont5-1">
+            <div class="Cont5-1">
+                <div class="candy"><img src="img/effext1.png" alt="candy"></div>
+                <div class="effectbox">
+                    <h5>Parallax EFFECT</h5>
+                    <h6>Parllax를 이용하여 만든 스크롤 이펙트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                </div>
+            </div>
+            <div class="candy2"><img src="img/effect3.png" alt="candy"></div>
+        </section>
+        <section id="Cont5-2">
+            <div class="Cont5-2">
+                <div class="candy"><img src="img/effext1.png" alt="candy"></div>
+                <div class="effectbox2">
+                    <h5>Mouse Effect</h5>
+                    <h6>마우스를 이용한 이펙트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                </div>
+            </div>
+            <div class="candy2"><img src="img/effect3.png" alt="candy"></div>
+        </section>
+        <section id="Cont5-3">
+            <div class="Cont5-3">
+                <div class="candy"><img src="img/effext1.png" alt="candy"></div>
+                <div class="effectbox3">
+                    <h5>Slider Effect</h5>
+                    <h6>슬라이더를 이용한 이펙트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                </div>
+            </div>
+            <div class="candy2"><img src="img/effect3.png" alt="candy"></div>
+        </section>
+        <section id="Cont6">
+            <div class="Cont6">
+                <h3>SITE</h3>
+                <p>여러 사이트를 모티브하여 만든 사이트 포토폴리오입니다.</p>
+                <img src="img/SITE2.png" alt="SITE">
+            </div>
+        </section>
+        <section id="Cont6-1">
+            <div class="Cont6-1">
+                <div class="pig"><img src="img/pig1.png" alt="pig"></div>
+                <div class="sitebox">
+                    <h5>Webstandard</h5>
+                    <h6>웹표준을 준수한 사이트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                    <p>HomePage</p>
+                </div>
+            </div>
+            <div class="pig2"><img src="img/pig2.png" alt="pig2"></div>
+        </section>
+        <section id="Cont6-2">
+            <div class="Cont6-2">
+                <div class="pig"><img src="img/pig1.png" alt="pig"></div>
+                <div class="sitebox2">
+                    <h5>Reponsive</h5>
+                    <h6>반응형 사이트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                    <p>HomePage</p>
+                </div>
+            </div>
+            <div class="pig2"><img src="img/pig2.png" alt="pig2"></div>
+        </section>
+        <section id="Cont6-3">
+            <div class="Cont6-3">
+                <div class="pig"><img src="img/pig1.png" alt="pig"></div>
+                <div class="sitebox3">
+                    <h5>Megabox</h5>
+                    <h6>기업 사이트를 참고하여 만든 사이트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                    <p>HomePage</p>
+                </div>
+            </div>
+            <div class="pig2"><img src="img/pig2.png" alt="pig2"></div>
+        </section>
+        <section id="Cont6-4">
+            <div class="Cont6-4">
+                <div class="pig"><img src="img/pig1.png" alt="pig"></div>
+                <div class="sitebox4">
+                    <h5>Naver CLOVA</h5>
+                    <h6>기업 사이트를 참고하여 만든 사이트입니다.</h6>
+                    <p>Coding source</p>
+                    <p>Figma</p>
+                    <p>HomePage</p>
+                </div>
+            </div>
+            <div class="pig2"><img src="img/pig2.png" alt="pig2"></div>
+        </section>
+        <section id="Cont7">
+            <div class="Cont7">
+                <h2>WELCOME TO<br>My Another portfolio</h2>
+                <p>리액트와 뷰를 이용하여 재구성된 포토폴리오입니다.</p>
+            </div>
+        </section>
+        <section id="Cont7-1">
+            <div class="Cont7-1">
+                <div class="title7-1">
+                    <h5>REACT</h5>
+                    <div class="react_img"><a href="#"><img src="img/React.png" alt="REACT"></a></div>
+                </div>
+                <div class="img7-2">
+                    <div class="sun"><img src="img/sun.png" alt="sun"></div>
+                </div>
+            </div>
+        </section>
+        <section id="Cont7-2">
+            <div class="Cont7-2">
+                <div class="title7-2">
+                    <h5>VUE</h5>
+                    <div class="VUE_img"><a href="#"><img src="img/React.png" alt="vue"></a></div>
+                </div>
+                <div class="img7-2">
+                    <div class="bord"><img src="img/Group 66.png" alt="Group 66"></div>
+                    <div class="cloud"><img src="img/cloud.png" alt="cloud"></div>
+                </div>
+            </div>
+        </section>
+        <section id="Cont8">
+            <div class="Cont8">
+                <h3><strong>My PortFolio List</strong> one more!</h3>
+                <ul class="Cont8-tit">
+                    <li><a href="#">ANIMATION<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>EFFECT MOTION</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>SITE</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>REACT</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>VUE</a></li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <footer id="footer">
+        <div class="footer">
+            <div class="ftitle">
+                <h3>I’m Ready to Jump<br>into your Porject!</h3>
+                <p>Send a Message</p>
+            </div>
+            <div class="mbox">
+                <div class="Name">Name</div>
+                <div class="Email">Email</div>
+                <div class="Email-1">What to fill in</div>
+                <div class="Send">Send</div>
+            </div>
+            <div class="back">
+                <img src="img/footerrrr.png" alt="footer">
+            </div>
+        </div>
+    </footer>
+       
+    <!-- //conetets -->
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            if( scrollTop > $("#section2").offset().top ){
+                $("#section2").css("background","gray");
+            }
+            //3번째 섹션에 왔을 때 스크롤탑을 0으로 초기화
+            let offset = scrollTop -  $("#section3").offset().top;
+            if( scrollTop > $("#section3").offset().top ){
+                //$("#section3 .sec3-wrap > div:nth-child(1)").css("background","red");
+                $("#section3 .sec3").css("left", -offset );
+            }
+            if( scrollTop > $("#section4").offset().top ){
+                $("#section4").css("background","darkgrey");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiko&display=swap" rel="stylesheet">
+    <style>
+       * {margin: 0; padding: 0;}
+        a {text-decoration: none; color: #000;}
+        li {list-style: none;}
+        em, address {font-style: normal;}
+        img ul li {display: block;}
+        @font-face {
+            font-family: 'yg-jalnan';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* header */
+        #header {
+            width: 100%; height: 100vh;
+            background: #F5F0E9;
+            position: relative;
+        }
+        .headMenu {}
+        .headMenu .qick {
+            position: fixed;
+            right: 15%;
+            z-index: 10000;
+        }
+        .headMenu .qick li {
+            display: inline-block;
+            font-family: 'Poppins';
+            font-size: 20px;
+            margin: 30px 0;
+            padding: 0 40px;
+        }
+        .omg img {
+            position: fixed;
+            right: -5%; top: 28%;
+            width: 22%;
+            z-index: 600;
+        }
+        .rainbow img {
+           position: fixed;
+           left: -12%; top: 58%;
+           width: 35%;
+           z-index: 400;
+        }
+        .happy img {
+            position: absolute;
+            left: 20%; top: 25%;
+            width: 15%;
+            transform: rotate(-15deg);
+
+        }
+        .title h1 {
+            text-align: center;
+            position: absolute; left: 50%; top: 45%;
+	        transform: translate(-50%, -50%);   
+            font-family: 'yg-jalnan';
+            color: #241E60;
+            font-size: 110px;
+            white-space: nowrap;
+        }
+        .circle img {
+            position: absolute;
+            left: 45%; top: 850px;
+            width: 8%;
+            animation: animate 4s linear infinite;
+        }
+        @keyframes animate {
+            to {transform: rotate(0deg)}
+            from {transform: rotate(360deg)}
+        }
+        .egg_1 img {
+            position: absolute;
+            left: 47.2%; top: 890px;
+            width: 3.5%;
+        }
+        .wave img {
+            position: absolute;
+            left: 25%; top: 68%;
+            width: 18%;
+        }
+        .wave-text p {
+            font-family: 'Amiko';
+            color: #2F4E48;
+            font-size: 22px;
+            position: absolute;
+            left: 25%; top: 74%;
+        }
+
+        /* section1 */
+        #section1 {
+            width: 100%; height: 100vh;
+            background: #F5F0E9;
+            position: relative;
+        }
+        .egg_2 img {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%); 
+            width: 25%;
+            /* animation: hpegg 6s infinite; */
+        }
+        .eggout img {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%) rotate(10deg); 
+            width: 45%;
+            /* animation: eggout 6s infinite; */
+        }
+        .hart img {
+            position: absolute;
+            left: 40%; top: 30%;
+            width: 5%;
+            /* animation: hart 6s infinite; */
+        }
+        .section1-text p {
+            position: absolute;
+            left: 50%; top: 20%;
+            transform: translate(-50%, -50%); 
+            font-family: 'yg-jalnan';
+            color: #241E60;
+            text-align: center;
+            font-size: 50px;
+        }
+        /* section2 */
+        #section2 {
+            width: 100%; height: 100vh;
+            background: #F5F0E9;
+        }
+
+        /* section3 */
+        #section3 {
+            width: 100%; height: 100vh;
+            background: #dfa452;
+        }
+        #section4 {
+            width: 100%; height: 100vh;
+            background: #f5a536;
+        }
+        #section5 {
+            width: 100%; height: 100vh;
+            background: #31291d;
+        }
+        #section6 {width: 100%; height: 100vh;
+            background: #ffd08f;}
+        #section7 {
+            width: 100%; height: 100vh;
+            background: #ff9e17;
+        }
+        #footer {
+            width: 100%; height: 100vh;
+            background: #fdb248;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header">
+                <div class="headMenu">
+                    <div class="title">
+                        <h1>Welcome To <br> My PortFollo SITE</h1>
+                    </div>
+                    <ul class="qick">
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">My Site</a></li>
+                        <li><a href="#">My Reference</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="text-circle">
+                        <div class="circle"><img src="img/text-circle1.png" alt="text"></div>
+                    </div>
+                </div>
+                <div class="img1">
+                    <div class="omg"><img src="img/영어.png" alt="omg"></div>
+                    <div class="rainbow"><img src="img/rainbow-egg.png" alt="rainbow"></div>
+                    <div class="happy"><img src="img/Group 45.png" alt="happy"></div>
+                    <div class="egg_1"><a href="#section1"><img src="img/Vector 293.png" alt="hpegg"></a></div>
+                    <div class="wave"><img src="img/wave.png" alt="wave"></div>
+                    <div class="wave-text">
+                        <p>Start your day in a<br>happy place</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="contents">
+        <section id="section1">
+            <div class="container">
+                <div class="section1">
+                    <div class="img1">
+                        <div class="section1-text">
+                            <p>시작 전에 노래 한 곡 어떠세요?</p>
+                        </div>
+                        <div class="egg_2"><img src="img/hpegg.png" alt="hartegg"></div>
+                        <div class="eggout"><img src="img/껍질.png" alt="eggout"></div>
+                        <div class="hart"><img src="img/hart.png" alt="hart"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="container">
+                <div class="section2">
+                    <div class="img2">
+                        <div class="about-text">
+                            <h5><strong>끊</strong>임없이 나를 위해 도전하고 <br>
+                                <strong>계</strong>속해서 앞으로 <strong>나</strong>아가는 사람</h5>
+                            <p>저는 항상 뭘 하고 싶은지 뭘 좋아하는지에 대한 고민을 했던 학생이였습니다. 
+                                취업 후에도 끊임없이 저의 미래에 대하여 깊은 고민을 하게 되었고 찰나에 고등학교에서 깊게는 아니지만 코딩 과목이 있는 날엔 항상  열심히 들으며 흥미로워하던 제가 생각나  일 년 간의 고민 끝에 퇴사를 하고 웹 반응형 UI/UX 웹 퍼블리셔 과정을 수강하게 되었습니다.  6개월의 수료 과정에서 처음 수업 때와는 다르게 시간이 지날 수록 깊이 들어가 어려움이 많았지만 그 과정을 해결해 나아가는 과정을 기반으로 어려움이 있어도 머물러 있지 않고 계속해서 나아갈 수 있도록 노력하는 사람이 되겠습니다.</p>
+                        </div>
+                        <div class="aboutMon"><img src="img/Group 66.png" alt="rainbow"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="container">
+                <h2 class="h2">ANIMATION</h2>
+                <p class="p">애니메이션 포토폴리오입니다</p>
+            </div>
+        </section>
+        <section id="section4">
+            <div class="container">
+                <h2 class="h2">EFFECT MOTION</h2>
+                <p class="p">이펙트 효과가 들어간 포토폴리오입니다.</p>
+            </div>
+        </section>
+        <section id="section5">
+            <div class="container">
+                <h2 class="h2">SITE</h2>
+                <p class="p">사이트 포토폴리오입니다</p>
+            </div>
+        </section>
+        <section id="section6">
+            <div class="container"></div>
+        </section>
+        <section id="section7">
+            <div class="container"></div>
+        </section>
+    </div>
+    <footer id="footer"></footer>
+
+
+    <!-- script -->
+    <script>
+        
+    </script>
+</body>
+</html>

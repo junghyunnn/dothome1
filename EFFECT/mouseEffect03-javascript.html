@@ -113,7 +113,7 @@
 <body>
     <!--info-->
     <div class="info left">
-        <h1>Mouse Effect03 - jQuery</h1>
+        <h1>Mouse Effect03 - javascript</h1>
         <p>마우스 효과 - Blend Effect</p>
     </div>
     <div class="info right">
@@ -163,18 +163,18 @@
     <script>
         //선택자
         const cursor = document.querySelector(".cursor")
-        const contentEm = document.querySelector(".contnets em")
+        const contentEm = document.querySelectorAll(".contnets em")
         const infoLi = document.querySelector(".info.bottom li")
         //움직임 효과
         document.addEventListener("mousemove", function(e){
             gsap.to(cursor, {duration: 0.3, left: e.pageX, top: e.pageY})
         })
         //오버효과
-        contentEm.forEach(elem => {
-            elem.addEventListener("mouseenter", () => {
+        contentEm.forEach(element => {
+            element.addEventListener("mouseenter", () => {
                 cursor.classList.add("active") 
             })
-            elem.addEventListener("mouseleave", () => {
+            element.addEventListener("mouseleave", () => {
                 cursor.classList.remove("active") 
             })
         });
@@ -185,7 +185,7 @@
                 cursor.style.mixBlendMode = text;
 
                 infoLi.forEach(li => {
-                    li.classList.remove("acrive");
+                    li.classList.remove("active");
                     this.classList.add("active");
                 })
 

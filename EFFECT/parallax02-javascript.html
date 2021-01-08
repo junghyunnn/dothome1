@@ -335,12 +335,12 @@
         //     document.querySelector("#section"+i+".content-item-desc")
         // }
 
-        // foreach문
         document.querySelectorAll(".content-item").forEach((elem) => {
-            let target = elem.childNodes[7];
-            let offset = (pageYOffset - elem.offsetTop)* 0.2;
-            target.style.transform = "translateY("+ -offset +"px)";
-        });
+                // console.log(elem);
+                let target = elem.childNodes[7];
+                let offset = (pageYOffset - elem.offsetTop) * 0.2;
+                target.style.transform = "translateY("+ -offset + "px)";
+            });
     });
     </script>
 </body>

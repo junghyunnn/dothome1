@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Cafe24Dangdanghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* layout */
+#contents {
+    width: 100%;
+    overflow: hidden;
+}
+#section1 {
+    width: 100%;
+    height: 100vh; 
+    background: #F5F0E9;
+    overflow: hidden;
+}
+#section2 {height: 3000px;}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* container */
+.container {
+    position: relative;
+    z-index: 10;
+}
+
+/* header */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'NanumSquareRound';
+    text-transform: uppercase;
+}
+#header h1 {
+    padding: 20px;
+    font-weight: bold;
+}
+#header .nav ul {
+    margin-right: 20px;
+}
+#header .nav li {
+    display: inline;
+}
+#header .nav li a {
+    display: inline-block;
+    padding: 30px 20px;
+    font-size: 16px;
+}
+
+/* sec1 */
+.img-wrap {
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+}
+.img1 {
+    position: absolute;
+    left: -150px; bottom: 10%;
+    width: 500px;
+    max-width: 100%;
+    transform: rotate(-10deg);
+    z-index: 1000;
+}
+.img2 {
+    position: absolute;
+    right: 0; top: 10%;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.img2 img {
+    margin-left: 100px;
+    width: 100%;
+    transform: rotate(-10deg);
+    
+}
+.sec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    
+}
+.sec1 h1 {
+    margin-bottom: 20vh;
+    font-size: 8vw;
+    line-height: 9vw;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 6px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1000;
+    color: #fcedd8;
+    color: #fff; 
+    text-shadow: 5px 5px 0px #FFBC01, 
+                  10px 10px 0px #AF70FF, 
+                  15px 15px 0px #FF6BAB, 
+                  20px 20px 0px #FF4055, 
+                  25px 25px 0px #00E387, 
+                  30px 30px 0px #8CEBFF;
+}

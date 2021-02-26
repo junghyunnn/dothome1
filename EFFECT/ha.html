@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {border:none; background-color:#fff; cursor: pointer;}
+        #mpopup2 {position: fixed; right: 1%; margin-right:10px;  z-index: 1000;}
+        .showarea2 {width: 90%;}
+        .mpopupnottoday2 {position:absolute ;right:0; top:0;}
+   
+        #mpopup2 .todayopen button.close1 {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 30px;
+            right: 20px;
+            transition: all ease 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="mpopup2">
+        <div class="todayopen">
+           <button>
+              <img class="close1" src="https://junghyunnn.github.io/dothome1/test/img/raisin%20x.png" alt="닫기" border="0" class="dd">
+           </button>
+           <img src="https://junghyunnn.github.io/dothome1/test/img/raisin%20tree1.png" alt="헛개차" border="0" usemap="#searchFloatMap">
+           <map name="searchFloatMap" id="searchBannerMap">
+              <area shape="circle" coords="66,65,63" href="http://cuspgroupmall.com/goods/goods_view.php?goodsNo=1000012903" alt="헛개차">
+           </map>
+        </div>
+     </div>
+    <!--script-->
+    <script>
+        const btn = document.querySelector("button");
+        const popup = document.querySelector("#mpopup2");
+
+        btn.addEventListener("click", function(){
+        popup.style.display = "none";
+        });
+    </script>
+</body>
+</html>

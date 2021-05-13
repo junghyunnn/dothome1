@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+	font-family: 'BMJUA';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: 'BMJUA';
+	height: 100vh;
+	background-image: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+}
+.hover_wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.hover_wrap > div {
+	position: relative;
+	max-width: 600px;
+	margin: 1%;
+	perspective: 1000px;
+}
+.hover_wrap > div img {
+	width: 100%; vertical-align: top;
+	border: 7px solid #764BA2;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.hover_wrap > div .front {transition: transform 1s; backface-visibility: hidden; transform-style: preserve-3d;}
+.hover_wrap > div .back {transition: transform 1s; position: absolute; left: 0; top: 0; z-index: -1; transform-style: preserve-3d;}
+
+.hover_wrap > div figcaption {
+    position: absolute; left: 50%; top: 50%;  
+    transform: translate(-50%, -50%) translatez(100px); 
+    color: #fff; 
+    background: rgba(0,0,0,0.4); 
+    padding: 15px; text-align: center; 
+    line-height: 1.4; 
+    backface-visibility: hidden;
+}
+.hover_wrap .front figcaption {
+    position: absolute; left: 50%; top: 50%;  
+    transform: translate(-50%, -50%) translatez(100px); 
+    color: #fff; 
+    background: rgba(0,0,0,0.4); 
+    padding: 15px; text-align: center; 
+    line-height: 1.4; 
+    backface-visibility: hidden;
+    opacity: 0;
+}
+
+
+.hover_wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.hover_wrap > figure {
+	position: relative;
+	max-width: 600px;
+	margin: 1%;
+	border: 7px solid #ccc;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	overflow: hidden;
+}
+.hover_wrap > figure img {
+	width: 100%;
+	vertical-align: top;
+}
+.hover_wrap > figure >figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.hover_wrap > figure >figcaption h3 {
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+.hover_wrap > figure >figcaption p {
+	font-size: 18px;
+}
+@media (max-width: 800px){
+	.hover_wrap {
+		flex-direction: column;
+	}
+}
+/* Hover Effect */
+.hover_wrap .hover1 figcaption {opacity: 0; transition: all 0.33s ease-in-out;}
+.hover_wrap .hover1:hover figcaption {opacity: 1;}
+
+.hover_wrap .hover2 figcaption {opacity: 0; bottom: -60px; transition: all 0.33s ease-in-out;}
+.hover_wrap .hover2:hover figcaption {opacity: 1; bottom: 0;}
+
+/* hover Effect */
+.hover_wrap > div.hover7 .front {transform: rotatex(0deg);}
+.hover_wrap > div.hover7:hover .front {transform: rotatex(180deg);}
+.hover_wrap > div.hover7 .back {transform: rotatex(-180deg);}
+.hover_wrap > div.hover7:hover .back {transform: rotatex(0deg);}
+
+.hover_wrap > div.hover8 .front {transform: rotatey(0deg);}
+.hover_wrap > div.hover8:hover .front {transform: rotatey(180deg);}
+.hover_wrap > div.hover8 .back {transform: rotatey(-180deg); }
+.hover_wrap > div.hover8:hover .back {transform: rotatey(0deg);}
+
+/* Hover Effect */
+/* .hover_wrap > div.hover7 figcaption {opacity: 0; transition: all 0.33s ease-in-out;}
+.hover_wrap > div.hover7:hover figcaption {opacity: 1;}
+
+.hover_wrap .hover2 figcaption {opacity: 0; bottom: -60px; transition: all 0.33s ease-in-out;}
+.hover_wrap .hover2:hover figcaption {opacity: 1; bottom: 0;} */
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="hover_wrap">
+        <div class="hover7">
+            <figure class="front">
+                <img src="http://rscorp.imghost.cafe24.com/Cuspmall/210513/s7.png" alt="이미지">
+                <figcaption>
+                    <h3>Mouse Hover Effect01</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figcaption>
+            </figure>
+            <figure class="back">
+                <img src="http://rscorp.imghost.cafe24.com/Cuspmall/210513/s7.png" alt="이미지">
+                <figcaption>
+                    <h3>Mouse Hover Effect01</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <figure class="hover2">
+            <img src="http://rscorp.imghost.cafe24.com/Cuspmall/210513/s7.png" alt="이미지">
+            <figcaption>
+                <h3>Mouse Hover Effect02</h3>
+                <p>마우스 오버 효과입니다.</p>
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
